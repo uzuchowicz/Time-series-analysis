@@ -1,0 +1,11 @@
+%Main exection program
+close all
+clear all 
+clc
+%initializing parametes
+
+path ='C:\Users\Ula\Time-series-analysis\data\financial_timeseries_data.mat';
+
+n_deleted = 30;
+
+ [ predicted_close_data, deleted_close_data, original_close_data  ]  = financial_timeseries_prediction(path, n_deleted)

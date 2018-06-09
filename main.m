@@ -1,9 +1,15 @@
 %Main exection program
-
+close all
+clear all 
+clc
 %initializing parametes
 
-path ='C:\Users\Ula\Time-series-analysis\data\financial_timeseries_data.mat'
+path ='C:\Users\Ula\Time-series-analysis\data\financial_timeseries_data.mat';
 
-n_deleted = 30;
+n_deleted = 50;
 
-financial_timeseries_prediction(path, n_deleted)
+[ predicted_close_data, deleted_close_data, original_close_data  ]  = financial_timeseries_prediction(path, n_deleted);
+
+rmse_calculation(  predicted_close_data, deleted_close_data, original_close_data)
+len_window = 25
+[ rmse_window ] = rmse_window_calculation(  predicted_close_data, deleted_close_data, original_close_data, len_window)
