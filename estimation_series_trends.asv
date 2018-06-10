@@ -1,0 +1,30 @@
+function [series ] = estimation_series_trends( N, poly_degree )
+%% Polynomial and linear curve fitting for random series   
+
+%% inputs:
+%   N - number of matrix column  
+
+%% outputs
+%   rms: 
+
+%% Authors: 
+% 
+
+%% References
+%
+
+%Generation series
+series =randi(16,1000,N) + -6
+
+timeline = [1:1:1000]
+
+%%linear fitting
+poly_fitting(series,1)
+
+N
+%polynomial fitting
+
+
+
+
+end
